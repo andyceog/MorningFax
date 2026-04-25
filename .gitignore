@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode generated files
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# Swift / Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+docs/superpowers/specs/.DS_Store
+docs/superpowers/.DS_Store
+docs/.DS_Store
+.DS_Store
