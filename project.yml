@@ -1,0 +1,55 @@
+name: MorningFax
+options:
+  bundleIdPrefix: com.morningfax
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "18.0"
+  groupOrdering:
+    - order: [App, Core, Features, Domain, Mock, Resources]
+
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+targets:
+  MorningFax:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Core
+        optional: true
+      - path: Features
+        optional: true
+      - path: Domain
+        optional: true
+      - path: Mock
+        optional: true
+    resources:
+      - path: Resources
+        optional: true
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Morning Fax
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIAppFonts:
+          - Newsreader-Regular.ttf
+          - Newsreader-Italic.ttf
+          - Newsreader-SemiBold.ttf
+          - Inter-Regular.ttf
+          - Inter-Medium.ttf
+          - Inter-SemiBold.ttf
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.morningfax.app
+        TARGETED_DEVICE_FAMILY: "1"
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: "0.1"
+        IPHONEOS_DEPLOYMENT_TARGET: "18.0"
